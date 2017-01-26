@@ -1,0 +1,67 @@
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  /*I want the background to fill the page*/
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  /*I set the value of the overflow property to hidden on the body so that when the .bouncingbox divs reach the edge of the page scrollbars do not appear */
+  overflow: hidden;
+  /*Create an animated gradient background, the gradient and animation were created using https://www.gradient-animator.com/ */
+  background: linear-gradient(160deg, #ff0000, #ffa000, #02ff00, #0054ff);
+  background-size: 800% 800%;
+  -webkit-animation: GradientBackground 7s ease infinite;
+  -moz-animation: GradientBackground 7s ease infinite;
+  animation: GradientBackground 7s ease infinite;
+}
+@-webkit-keyframes GradientBackground {
+    0%{background-position:0% 63%}
+    50%{background-position:100% 38%}
+    100%{background-position:0% 63%}
+}
+@-moz-keyframes GradientBackground {
+    0%{background-position:0% 63%}
+    50%{background-position:100% 38%}
+    100%{background-position:0% 63%}
+}
+@keyframes GradientBackground {
+    0%{background-position:0% 63%}
+    50%{background-position:100% 38%}
+    100%{background-position:0% 63%}
+}
+.bouncingbox {
+  position: absolute;
+  margin: 0;
+
+}
+h1 {
+  background-color: white;
+  color: transparent;
+  padding: 2em 0;
+  font-size: 3em;
+  width: 457px;
+  text-align: center;
+  margin: 0;
+
+}
+h1 .transparenttext {
+ background: linear-gradient(160deg, #ff0000, #ffa000, #02ff00, #0054ff);
+ background-size: 800% 800%;
+ -webkit-animation: GradientBackground 7s ease infinite;
+ -moz-animation: GradientBackground 7s ease infinite;
+ animation: GradientBackground 7s ease infinite;
+ display: block;
+ -webkit-background-clip: text;
+ -webkit-text-fill-color: transparent;
+}
+
+p {
+  margin: 0;
+  border: 1em solid white;
+  padding: 2em;
+  width: 400px;
+  text-align: center;
+  color: white;
+  -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
